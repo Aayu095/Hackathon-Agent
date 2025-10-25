@@ -1,0 +1,40 @@
+# FastAPI and server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# Google Cloud
+google-cloud-aiplatform==1.38.1
+google-cloud-storage==2.10.0
+google-auth==2.23.4
+vertexai==1.71.1
+
+# Elasticsearch
+elasticsearch==8.11.0
+elastic-apm==6.20.0
+
+# HTTP and async
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Data processing
+pandas==2.1.4
+numpy==1.25.2
+python-dotenv==1.0.0
+
+# GitHub integration
+PyGithub==1.59.1
+requests==2.31.0
+
+# Text processing
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Development
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0
+
+# Missing critical dependencies
+pydantic-settings==2.1.0

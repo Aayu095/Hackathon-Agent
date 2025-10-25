@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: hackathon-agent-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: false
+      - key: GOOGLE_CLOUD_PROJECT
+        sync: false
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        sync: false
+      - key: VERTEX_AI_LOCATION
+        value: us-central1
+      - key: ELASTIC_CLOUD_ID
+        sync: false
+      - key: ELASTIC_API_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_WEBHOOK_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://hackathon-agent.vercel.app
